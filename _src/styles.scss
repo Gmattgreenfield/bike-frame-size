@@ -1,0 +1,178 @@
+
+// Variables
+$palm: 720px;
+
+// Colours
+$primary-color: #5B76A0;
+$secondary-colour: whitesmoke;
+
+// Contextual colours
+$controls-colour: $primary-color;
+$accent-colour: darken($primary-color, 20%);
+$background-colour: $secondary-colour;
+$body-text-colour: #232323;
+
+
+//
+$border-radius: 5px;
+
+
+
+// Base Document styles
+html,
+body {
+	height: 100%;
+	font-family: sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	background-color: $background-colour;
+	color: $body-text-colour;
+}
+body,
+body * {
+	box-sizing: border-box;
+}
+nav {
+	background-color: lighten($background-colour, 20%);;
+	padding: 20px;
+}
+.main-content {
+	padding: 20px;
+}
+
+// Layout
+@media (min-width: 720px) {
+
+	body {
+		display: flex;
+	}
+	nav {
+		flex-basis: 200px;
+		flex-grow: 1;
+		flex-shrink: 0;
+		border-right: 2px solid $accent-colour;
+	}
+	.main-content {
+		flex-basis: auto;
+		flex-grow: 10;
+		flex-shrink: 1;
+
+		width: 300px;
+	}
+} // End media query
+
+.grid {
+	display: flex;
+	margin-left: - 2rem;
+	.grid__item {
+		padding-left: 2rem;
+	}
+}
+
+@media (min-width: 500px) {
+	main {
+		flex-direction: row-reverse;
+		.grid__item:first-child {
+			flex: 1;
+		}
+		.grid__item:last-child {
+			flex: 2;
+		}
+	}
+} // End media query
+
+
+// Headings
+.heading {
+	font-family: 'Limelight', cursive;
+	margin-top: 0;
+}
+
+h1.heading {
+	font-size: 2rem;
+	line-height: 1.1;
+	@media (min-width: 720px) {
+		// Put each word on a new line
+		width: 1rem;
+	}
+}
+
+
+// Box
+.box {
+	border: 1px solid $primary-color;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background-color: white;
+}
+
+// Results
+.results__size {
+
+	text-align: center;
+
+	&__value {
+		font-size: 4rem;
+		font-weight: bold;
+	}
+	&__measurement {
+		line-height: 4rem; // for vertical algnment
+		vertical-align: top;
+	}
+}
+
+// Form / filters
+fieldset {
+	border: 0px;
+	margin: 0 0 2rem;
+	padding: 0;
+}
+legend {
+	margin-bottom: 1rem;
+	font-size: 1.3rem;
+}
+
+
+// Toggle
+.toggle {
+
+	// hide the radio buttons
+	input[type="radio"] {
+		position: absolute;
+		left: -9999px;
+		width: 0;
+		height: 0;
+	}
+	// make the labels look more like buttons
+	label {
+		float: left;
+		width: 50%;
+		padding: .3rem;
+		border: 1px solid $controls-colour;
+		color: $controls-colour;
+		cursor: pointer;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:first-of-type {
+			border-top-left-radius: $border-radius;
+			border-bottom-left-radius: $border-radius;
+		}
+		&:last-of-type {
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+
+	input[type="radio"]:checked + label {
+		background: $controls-colour;
+		color: white;
+	}
+}
+
+
+
+// Frame Image
+.frame-image {
+	width:100%;
+}

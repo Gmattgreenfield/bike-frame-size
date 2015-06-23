@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frame Size Calculator</title>
+
+    <link rel="stylesheet" href="assets/styles.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+    <nav id="js-controls">
+        <h1 class="heading">Bike Frame Size Calculator</h1>
+
+        <fieldset>
+            <legend class="heading">Bike Type</legend>
+
+            <span class="toggle">
+                <input type="radio" class="js-input" id="bike-type--road" value="road" name="bike-type" checked>
+                <label for="bike-type--road">Road</label>
+
+                <input type="radio" class="js-input" id="bike-type--mtb" value="mtb" name="bike-type">
+                <label for="bike-type--mtb">MTB</label>
+            </span>
+
+        </fieldset>
+
+        <fieldset>
+            <legend class="heading">Rider Details</legend>
+
+            <label for="input-leg">Inside Leg (cm)</label>
+            <select class="js-input" id="input-leg">
+                <option value="60">60cm</option>
+                <option value="61">61cm</option>
+                <option value="62">62cm</option>
+                <option value="63">63cm</option>
+                <option value="64">64cm</option>
+                <option value="65">65cm</option>
+                <option value="66">66cm</option>
+                <option value="67">67cm</option>
+                <option value="68">68cm</option>
+                <option value="69">69cm</option>
+                <option value="70">70cm</option>
+                <option value="71">71cm</option>
+                <option value="72">72cm</option>
+                <option value="73">73cm</option>
+                <option value="74">74cm</option>
+                <option value="75">75cm</option>
+                <option value="76">76cm</option>
+                <option value="77">77cm</option>
+                <option value="78">78cm</option>
+                <option value="79">79cm</option>
+                <option value="80">80cm</option>
+                <option value="81">81cm</option>
+                <option value="82">82cm</option>
+                <option value="83">83cm</option>
+                <option value="84" selected>84cm</option>
+                <option value="85">85cm</option>
+                <option value="86">86cm</option>
+                <option value="87">87cm</option>
+                <option value="88">88cm</option>
+                <option value="89">89cm</option>
+                <option value="90">90cm</option>
+                <option value="91">91cm</option>
+                <option value="92">92cm</option>
+                <option value="93">93cm</option>
+                <option value="94">94cm</option>
+                <option value="95">95cm</option>
+                <option value="96">96cm</option>
+                <option value="97">97cm</option>
+                <option value="98">98cm</option>
+                <option value="99">99cm</option>
+                <option value="100">100cm</option>
+                <option value="101">101cm</option>
+                <option value="102">102cm</option>
+                <option value="103">103cm</option>
+                <option value="104">104cm</option>
+                <option value="105">105cm</option>
+            </select>
+
+            <span class="help">?</span>
+
+            <label for="input-no-leg">Don't have your inside leg measurement?</label>
+            <input type="checkbox" id="input-no-leg">
+
+            <label for="input-height">Height</label>
+            <input type="number" class="js-input" id="input-height">cm
+
+        </fieldset>
+
+    </nav>
+
+    <div class="main-content">
+
+        <main class="grid">
+
+            <div class="grid__item">
+
+                <div class="box">
+                    <p>Your frame size is:</p>
+                    <div class="results__size">
+                        <span class="results__size__value" id="js-result">56</span>
+                        <span class="results__size__measurement" id="js-measurement">cm</span>
+                    </div>
+
+                    <p>If in doubt, choose a smaller frame for a more sporty ride, a larger frame for more comfort.</p>
+
+                </div>
+
+            </div>
+
+            <div class="grid__item">
+
+                <div class="box">
+                    <img class="frame-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bicyclemeasurements.svg/220px-Bicyclemeasurements.svg.png" alt="image of a bike frame with annotations labeling the names of each tube.">
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="box">
+            <p>This site was made by <a href="www.mattgreenfield.co.uk">Matt Greenfield</a> and is hosted on <a href="">Github</a></p>
+            <p>It uses Google fonts.</p>
+            <p>To improve the accuracy of the information provided, please contact Matt</p>
+        </footer>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/scripts.min.js"></script>
+</body>
+</html>
